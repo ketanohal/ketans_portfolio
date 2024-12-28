@@ -2,24 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width"/>
     <title>Ketan Ohal</title>
+
+    <!-- Linking to external CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Linking to external JavaScript files -->
     <script defer src="{{ url_for('static', filename='js/smoothScroll.js') }}"></script>
     <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
+    <!-- Google Analytics Global Site Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7NZVD8FW4M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7NZVD8FW4M');  <!-- This is your Measurement ID -->
+    </script>
 </head>
+    
 <body>
     <div class="container">
         <aside class="sidebar">
             <h1>Ketan Ohal</h1>
             <p>Software Developer</p>
-            <p>I build accessible, pixel-perfect digital experiences for the web.</p>
+            <p>I solve challenges with innovative and reliable software solutions</p>
 
             <nav class="navigation">
                 <ul>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                 </ul>

@@ -61,9 +61,15 @@ body, html {
 
 .sidebar h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 3.5rem;
+    font-size: 3rem;
+    line-height: 1;
     color: #ffffff; /* Green */
     margin-bottom: -34px;
+    font-weight: 700;
+    letter-spacing: -.025em;
+    cursor: pointer;
+    font-feature-settings: "ss03", "cv02", "cv11";
+    font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .sidebar p {
@@ -127,7 +133,7 @@ body, html {
 /* Content Area */
 .content {
     width: 50%;
-    padding: 10px 20px;
+    padding: 5px 10px;
     padding-right: 110px;
     overflow-y: auto; /* Enable vertical scrolling */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling */
@@ -188,7 +194,7 @@ body, html {
 /* Section In-View State */
 section.in-view .line {
     width: 100%;
-    background-color: #64ffda; /* Green */
+    /* background-color: #a2a7a6; Green */
 }
 
 section.in-view h2 {
@@ -206,4 +212,600 @@ section.in-view h2 {
 /* Ensure Smooth Scrolling with Padding */
 html {
     scroll-padding-top: 80px;
+}
+
+.tech-keyword {
+    font-weight: bold;
+    color: #007acc; /* Blue color for emphasis */
+    /* background-color: #e7f3fe; Light blue background */
+    padding: 0 5px;
+    border-radius: 3px;
+}
+/* Style for the job section */
+.group {
+    position: relative;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Background highlight when hovering over the entire job section */
+.group:hover {
+    opacity: 1;
+}
+
+/* About Section */
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: left;
+    color: #ccd6f6;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #c1d8d3;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #cbddd9;
+    margin: 10px auto 0 auto;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #a8b2d1;
+}
+
+/* Highlighted Keywords */
+.highlight {
+    color: #a8b2d1;
+    font-weight: bold;
+    /* background-color: rgba(100, 255, 218, 0.1); */
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 30px 15px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* Overlay effect for the background */
+.group .absolute {
+    position: absolute;
+    inset: 0rem;
+    background-color: rgba(53, 55, 80, 0.37);; /* Darkened background */
+    border-radius: 8px;
+    z-index: 0;
+    transition: background-color 0.3s ease;
+}
+
+.group:hover .absolute {
+    background-color: rgba(0, 1, 1, 0.263); /* Darker background on hover */
+}
+
+/* Title and content styling */
+.group h3, .group p {
+    position: relative;
+    z-index: 1; /* Ensure text is on top of the background */
+}
+
+/* Additional hover effect on job tags */
+.group:hover .tech-keyword {
+    background-color: #02132d;
+    color: #02132d; 
+}
+
+/* Styling for job title link */
+.group a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.group:hover a {
+    color: #23fcdf; /* Light color for the title on hover */
+}
+
+
+ul.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;  /* Adjust the gap between the items */
+    padding-left: 0;
+    list-style: none;
+}
+
+ul.technologies li {
+    margin: 5px;
+}
+
+ul.technologies li div {
+    background-color: #6a9c974a;  /* Light teal background color */
+    border-radius: 9999px;  /* Fully rounded corners */
+    padding: 5px 10px;  /* Adjust padding for desired size */
+    color: #4fd1c5;  /* Text color */
+    font-size: 0.875rem;  /* Text size */
+    font-weight: 500;  /* Font weight */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul.technologies li div:hover {
+    background-color: #38b2ac;  /* Darker teal background on hover */
+    color: white;  /* White text on hover */
+}
+
+
+
+/* Styling for technology tags */
+.tech-keyword {
+    color: #9ccdc7ed;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Adding hover effect for tech tags */
+.group:hover .tech-keyword {
+    color: #81E6D9;
+}
+
+/* Additional styling for the job content */
+.group .z-10 {
+    position: relative;
+    z-index: 2;
+}
+
+.group .mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.group .mt-1 {
+    margin-top: 37.34px;
+    margin-left: 28px;
+}
+
+.group .text-xs {
+    font-size: 0.75rem;
+}
+
+.group .text-sm {
+    font-size: 0.875rem;
+}
+
+.group .font-semibold {
+    font-weight: 600;
+}
+
+.group .uppercase {
+    text-transform: uppercase;
+}
+
+.group .leading-snug {
+    /* line-height: 1.375rem; */
+    margin-top: 24px;
+    line-height: 40px;
+    margin-bottom: 24px;
+    margin-right: 23px;
+}
+
+#experience ul {
+    margin-bottom:50px; /* Adjust this value to control the space between the lists */
+}
+#projects ul {
+    margin-bottom:50px; /* Adjust this value to control the space between the lists */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styling */
+.group {
+    position: relative;
+    display: grid;
+    padding-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* .z-10 {
+    z-index: 10;
+} */
+
+/* .font-medium {
+    font-weight: 500;
+} */
+
+/* .leading-snug {
+    line-height: 1.375;
+} */
+
+/* .text-slate-500 {
+    color: #6b7280;
+}
+
+.text-slate-200 {
+    color: #e5e7eb;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.text-teal-300 {
+    color: #4fd1c5;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.uppercase {
+    text-transform: uppercase;
+} */
+
+/* .tracking-wide {
+    letter-spacing: 0.05em;
+} */
+
+/* .mb-2 {
+    margin-bottom: 0.5rem;
+} */
+
+/* .mt-1 {
+    margin-top: 0.25rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+} */
+
+.sm\:col-span-2 {
+    grid-column: span 2 / span 2;
+}
+
+.sm\:col-span-6 {
+    grid-column: span 6 / span 6;
+}
+
+.sm\:grid-cols-8 {
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.sm\:gap-8 {
+    gap: 2rem;
+}
+
+.md\:gap-4 {
+    gap: 1rem;
+}
+
+/* .lg\:hover\/opacity-100:hover {
+    opacity: 1 !important;
+} */
+
+/* .lg\:group-hover\/list\:opacity-50:hover {
+    opacity: 0.5;
+}
+
+.inline-flex {
+    display: inline-flex;
+} */
+
+/* .items-baseline {
+    align-items: baseline;
+} */
+
+/* .leading-tight {
+    line-height: 1.25;
+} */
+
+.hover\:text-teal-300:hover {
+    color: #4fd1c5;
+}
+
+.focus-visible\:text-teal-300:focus-visible {
+    color: #4fd1c5;
+}
+
+.group\/link:hover {
+    color: #4fd1c5;
+}
+
+.text-base {
+    font-size: 1rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.technologies {
+    list-style-type: none;
+    padding: 0;
+}
+
+.technologies li {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* .tech-keyword {
+    font-weight: bold;
+    color: #4fd1c5;
+} */
+
+/* Projects Section */
+/* #projects h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+} */
+
+/* List items */
+/* .mb-12 {
+    margin-bottom: 3rem;
+} */
+
+/* Project Item Styling */
+.project-item {
+    margin-bottom: 3rem;
+}
+
+.experience-item {
+    margin-bottom: 3rem;
+}
+
+/* Skills Section */
+#skills {
+    margin-bottom: 0px;
+    padding: 27px 27px;
+    /* background-color: #0a192f; Deep Navy Background */
+    color: #ccd6f6; /* Light Slate */
+    border-radius: 15px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
+    overflow: hidden;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #64ffda; /* Neon Green */
+    text-transform: uppercase;
+    border-bottom: 4px solid #64ffda;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    animation: fadeIn 1.2s ease-out both;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 30px;
+    padding: 0;
+    animation: fadeInUp 1.2s ease-out both;
+}
+
+.skill-category {
+    position: relative;
+    background: linear-gradient(1deg, #33416c2b, #02062d00);
+    border-radius: 15px;
+    padding: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.skill-category:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #64ffda;
+    transition: transform 0.4s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.skill-category:hover:before {
+    transform: scaleX(1);
+}
+
+.skill-category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+.skill-category h3 {
+    font-size: 13px;
+    color: #43c9c2;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    position: relative;
+    letter-spacing: 1.5px;
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation: fadeInUp 1.2s ease-out both;
+}
+
+.tech-list li {
+    font-size: 14px;
+    color: #8892b0; /* Slate */
+    padding: 10px 0;
+    margin: 0;
+    position: relative;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tech-list li:last-child {
+    border-bottom: none;
+}
+
+.tech-list li:hover {
+    color: #64ffda;
+    transform: translateX(10px);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stacks items for smaller screens */
+    }
+}
+
+
+.projects-section {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    border: 0.5px solid rgba(255, 255, 255, 0.158);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid #2d3748;
+    border-radius: 8px;
+    background-color: #2d37489a;
+}
+
+.project-image {
+    padding-left: 15px;
+    padding-top: 20px;
+    transition: border 0.2s ease;
+}
+
+.project-image img {
+    width: 150px;
+    height: 100px;
+    border: 2px solid rgba(255, 255, 255, 0.189);
+    object-fit: cover;
+}
+
+/* Move hover effect to the card */
+.project-card:hover .project-image img {
+    border: 2px solid #8195b7;
+}
+
+.project-card:hover .project-title {
+   
+    color: #59eeff;
+}
+
+.project-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-bottom: -21px;
+}
+
+.project-description {
+    font-size: 12px;
+    color: #a0aec0;
+    line-height: 1.5;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-tech span {
+    background-color: #6a9c974a;
+    border-radius: 9999px;
+    padding: 5px 10px;
+    color: #4fd1c5;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }

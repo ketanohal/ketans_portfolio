@@ -1,75 +1,231 @@
 {% extends "base.html" %}
 {% block content %}
-<section id="about">
-    <h2>About</h2>
-    <p>
-        I’m a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.
-
-Currently, I'm a Senior Front-End Engineer at Klaviyo, specializing in accessibility.<br><br> I contribute to the creation and maintenance of UI components that power Klaviyo’s frontend, ensuring our platform meets web accessibility standards and best practices to deliver an inclusive user experience.
-
-In the past, I've had the opportunity to develop software across a variety of settings — from advertising agencies and large corporations to start-ups and small digital product studios.<br><br> Additionally, I also released a comprehensive video course a few years ago, guiding learners through building a web app with the Spotify API.
-
-In my spare time, I’m usually climbing, reading, hanging out with my wife and two cats, or running around Hyrule searching for Korok seeds
-    </p>
+<section id="about" class="about-section">
+    <div class="about-content">
+        <p>
+            Hello! I’m Ketan, a results-driven software developer with hands-on experience in both front-end and back-end development. 
+            I specialize in <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, <span class="highlight">JavaScript</span>, 
+            <span class="highlight">Core PHP</span>, and <span class="highlight">Flask</span>. Over the past year, I’ve worked on projects like 
+            developing <span class="highlight">APIs</span>, creating <span class="highlight">resume builders</span>, and designing 
+            <span class="highlight">admin panels</span>. These projects helped me sharpen my skills in <span class="highlight">API integration</span>, 
+            <span class="highlight">authentication</span>, and <span class="highlight">database management</span>.
+        </p>
+        <p>
+            My goal is to build user-centric web applications that combine thoughtful design with robust engineering. 
+            I’m well-versed in frameworks like <span class="highlight">Flask</span> and databases like <span class="highlight">MongoDB</span>. 
+            I strive to deliver impactful projects that enhance user experiences and add value.
+        </p>
+        <p>
+            When I’m not coding, I enjoy exploring new technologies, playing volleyball, and swimming. These activities fuel my creativity 
+            and help me approach challenges with a fresh perspective.
+        </p>
+    </div>
 </section>
 
+
+
+
+<section id="skills">
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h3>Languages</h3>
+            <ul class="tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Core PHP</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3>Web Development</h3>
+            <ul class="tech-list">
+                <li>CoreUI</li>
+                <li>Tailwind CSS</li>
+                <li>UI/UX Design</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3>API Development & Integration</h3>
+            <ul class="tech-list">
+                <li>Python API</li>
+                <li>JWT Tokenization</li>
+                <li>API Testing</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3>Databases</h3>
+            <ul class="tech-list">
+                <li>SQL</li>
+                <li>MongoDB</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3>DevOps Tools</h3>
+            <ul class="tech-list">
+                <li>Docker</li>
+                <li>Git</li>
+                <li>CI/CD Pipelines</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3>Cloud Technologies</h3>
+            <ul class="tech-list">
+                <li>Azure Fundamentals</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+
 <section id="experience">
-    <h2>Experience</h2>
-    <ul>
-        <li>
-            <strong>Senior Frontend Developer</strong> - TechCorp Inc. (2020 - Present)
-            <p>Led a team of developers to design and implement modern web applications using React and Redux.</p>
+    <ul style="list-style-type: none; padding-left: 0;">
+        <!-- First Experience Entry -->
+        <li class="mb-12 experience-item" style="list-style-type: none;">
+            <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                <header class="cursor-pointer z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2" aria-label="May 2024 to Oct 2024">May 2024 — Oct 2024</header>
+                <div class="z-10 sm:col-span-6">
+                    <h3 class="font-medium leading-snug text-slate-200">
+                        <div>
+                            <a class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base" href="#" target="_blank" rel="noreferrer noopener" aria-label="Software Developer at Pratech Global">
+                                <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                <span>
+                                    Software Developer ·
+                                    <span class="inline-block">
+                                        Pratech Global
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                    </h3>
+                    <p class="mt-2 text-sm leading-normal">
+                        Built web applications, including <span class="tech-keyword">Admin Panel</span> and <span class="tech-keyword">HR Portal</span>, using <span class="tech-keyword">React.js</span> and <span class="tech-keyword">Flask</span>.
+                    </p>
+                    <p class="mt-2 text-sm leading-normal">
+                        Developed robust <span class="tech-keyword">APIs</span> with secure user authentication via <span class="tech-keyword">JWT tokenization</span>.
+                    </p>
+                    <p class="mt-2 text-sm leading-normal">
+                        Applied <span class="tech-keyword">agile methodologies</span> to deliver scalable and user-friendly solutions.
+                    </p>
+                    <ul class="technologies" aria-label="Technologies used">
+                        <li>
+                            <div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 hover:bg-teal-500 hover:text-white cursor-pointer">
+                                React.js
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 hover:bg-teal-500 hover:text-white cursor-pointer">
+                                Flask
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 hover:bg-teal-500 hover:text-white cursor-pointer">
+                                JWT
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 hover:bg-teal-500 hover:text-white cursor-pointer">
+                                Agile
+                            </div>
+                        </li>
+                    </ul>                    
+                </div>
+            </div>
         </li>
-        <li>
-            <strong>Senior Frontend Developer</strong> - TechCorp Inc. (2020 - Present)
-            <p>Led a team of developers to design and implement modern web applications using React and Redux.</p>
-        </li>
-        <li>
-            <strong>Senior Frontend Developer</strong> - TechCorp Inc. (2020 - Present)
-            <p>Led a team of developers to design and implement modern web applications using React and Redux.</p>
-        </li>
-        <li>
-            <strong>Senior Frontend Developer</strong> - TechCorp Inc. (2020 - Present)
-            <p>Led a team of developers to design and implement modern web applications using React and Redux.</p>
-        </li>
-        <li>
-            <strong>Senior Frontend Developer</strong> - TechCorp Inc. (2020 - Present)
-            <p>Led a team of developers to design and implement modern web applications using React and Redux.</p>
-        </li>
-        <li>
-            <strong>Senior Frontend Developer</strong> - TechCorp Inc. (2020 - Present)
-            <p>Led a team of developers to design and implement modern web applications using React and Redux.</p>
-        </li>
-        <li>
-            <strong>Frontend Developer</strong> - WebSolutions Ltd. (2017 - 2020)
-            <p>Collaborated with cross-functional teams to deliver scalable and efficient web solutions.</p>
-        </li>
-        <li>
-            <strong>Intern Developer</strong> - StartUp Hub (2016 - 2017)
-            <p>Contributed to small projects and assisted in bug fixes and performance improvements.</p>
+        
+        <!-- Second Experience Entry -->
+        <li class="mb-12 experience-item" style="list-style-type: none;">
+            <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2" aria-label="Oct 2023 to Oct 2024">Oct 2023 — Oct 2024</header>
+                <div class="z-10 sm:col-span-6">
+                    <h3 class="font-medium leading-snug text-slate-200">
+                        <div>
+                            <a class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base" href="#" target="_blank" rel="noreferrer noopener" aria-label="Junior System Engineer at U&D Square Solutions">
+                                <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                                <span>
+                                    Junior System Engineer ·
+                                    <span class="inline-block">
+                                        U&D Square Solutions
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                    </h3>
+                    <p class="mt-2 text-sm leading-normal">
+                        Worked with <span class="tech-keyword">Node.js</span> and <span class="tech-keyword">MongoDB</span> to develop and deploy backend solutions.
+                    </p>
+                    <p class="mt-2 text-sm leading-normal">
+                        Worked with the team to integrate APIs, optimize database queries, and ensure a smooth user experience.
+                    </p>
+                    <ul class="technologies" aria-label="Technologies used">
+                        <li>
+                            <div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 hover:bg-teal-500 hover:text-white cursor-pointer">
+                                Node.js
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 hover:bg-teal-500 hover:text-white cursor-pointer">
+                                MongoDB
+                            </div>
+                        </li>
+                    </ul>                    
+                </div>
+            </div>
         </li>
     </ul>
 </section>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <div>
-        <h3>Project One: Portfolio Website</h3>
-        <p>
-            A personal portfolio website built with React, showcasing my skills, experience, and projects.
-        </p>
-    </div>
-    <div>
-        <h3>Project Two: Task Manager App</h3>
-        <p>
-            A task management tool built with Vue.js and Firebase, allowing users to organize their daily tasks.
-        </p>
-    </div>
-    <div>
-        <h3>Project Three: E-commerce Platform</h3>
-        <p>
-            Developed a full-stack e-commerce website with Django and integrated Stripe for payment processing.
-        </p>
+<section id="projects" class="projects-section">
+    <div class="project-container">
+        <!-- Project 1 -->
+        <a href="https://noteshub-295v.onrender.com" class="project-card" target="_blank">
+            <div class="project-image">
+                <img src="static\images\technoteshub.png" alt="TechNotes Hub Image" />
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">TechNotes Hub</h3>
+                <p class="project-description">
+                    Web app for accessing and adding technical notes. Users can browse notes on various technical topics or contribute their own notes for others to explore and learn from.
+                </p>
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Flask</span>
+                    <span>MongoDB</span>
+                </div>
+            </div>
+        </a>
+        
+        <!-- Example for your projects -->
+        <a href="https://technoteshub-d9dy.onrender.com/landing" class="project-card">
+            <div class="project-image">
+                <img src="https://path-to-your-image.jpg" alt="Your Project Image" />
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Landing Page Design</h3>
+                <p class="project-description">
+                    This is a landing page I developed for showcasing my portfolio and connecting with clients. The page is built with HTML, CSS, and JavaScript, and is fully responsive.
+                </p>
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </a>
+        
+
+        <!-- Project 2 -->
+        
+
+        <!-- Add more projects here -->
     </div>
 </section>
+
+
 {% endblock %}
