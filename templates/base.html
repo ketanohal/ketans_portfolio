@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
     <title>Ketan Ohal</title>
+    <link rel="icon" type="image/webp" href="{{ url_for('static', filename='images/favicon.webp') }}">
+
 
     <!-- Linking to external CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -30,8 +32,8 @@
     <div class="container">
         <aside class="sidebar">
             <h1>Ketan Ohal</h1>
-            <p>Software Developer</p>
-            <p>I solve challenges with innovative and reliable software solutions</p>
+            <p class="postion">Software Developer</p>
+            <p>I solve challenges with innovative and <br>reliable software solutions</p>
 
             <nav class="navigation">
                 <ul>
@@ -43,12 +45,24 @@
             </nav>
 
             <div class="social-links">
-                <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://codepen.io" target="_blank" aria-label="CodePen"><i class="fab fa-codepen"></i></a>
-                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://goodreads.com" target="_blank" aria-label="Goodreads"><i class="fas fa-book-reader"></i></a>
-            </div>            
+                <!-- GitHub -->
+                <a href="https://github.com/ketanohal" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/ketan-ohal/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <!-- Email -->
+                <a href="mailto:mailmequicker@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <!-- Phone -->
+                <a href="tel:+919623061402" aria-label="Phone">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+            </div>
+                        
         </aside>
 
         <main class="content">

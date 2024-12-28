@@ -11,6 +11,10 @@ body, html {
     overflow-x: hidden; /* Prevent horizontal scrollbar */
     scroll-behavior: smooth;
 }
+.sidebar .postion {
+    color: #fafafa; /* Blue accent for position */
+    font-size: 20px;
+}
  h1{
     font-size: 70px;
 }
@@ -40,7 +44,7 @@ body, html {
 .container {
     display: flex;
     height: 100vh;
-    margin-left: 120px;  
+    margin-left: 170px;  
     /* margin-right: 80px;  */
     overflow: hidden;
 }
@@ -76,45 +80,59 @@ body, html {
     font-family: 'Inter', sans-serif;
     color: #8892b0; /* Slate */
     margin: -10px 0;
+    margin-top: -80px;
 }
 
+/* Navigation container */
 .navigation ul {
-    list-style: none;
+    list-style: none; /* Removes bullet points */
     padding: 0;
     margin: 0;
 }
 
-.navigation ul li {
-    margin: 15px 0;
-}
-
+/* Navigation Links */
 .navigation ul li a {
-    text-decoration: none;
-    color: #ccd6f6; /* Lightest Slate */
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
     position: relative;
+    display: inline-block; /* Ensure the underline matches the text width */
+    text-decoration: none;
+    color: #edf2f7; /* White text */
+    padding: 0.5rem 0; /* Add spacing between links */
+    transition: color 0.3s ease;
 }
 
-.navigation ul li a:hover {
-    color: #64ffda; /* Green */
-}
-
-/* Underline Effect */
+/* Underline Effect (Default State) */
 .navigation ul li a::before {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: 4px; /* Position underline below text */
     width: 0;
     height: 2px;
-    background-color: #64ffda; /* Green */
+    background-color: #64ffda; /* Green color */
     transition: width 0.3s ease;
 }
 
+/* Active State */
 .navigation ul li a.active::before {
-    width: 100%;
+    width: 100%; /* Fully extend underline to text width */
 }
+
+/* Hover State */
+.navigation ul li a:hover::before {
+    width: 100%; /* Fully extend underline to text width on hover */
+}
+
+/* Hover Text Color */
+.navigation ul li a:hover {
+    color: #64ffda; /* Change text color on hover */
+}
+
+/* Optional: Add spacing between list items */
+.navigation ul li {
+    margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+
 
 /* Social Links */
 .social-links a {
@@ -261,7 +279,7 @@ html {
 }
 
 .about-content p {
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.8;
     margin-bottom: 20px;
     color: #a8b2d1;
@@ -269,7 +287,7 @@ html {
 
 /* Highlighted Keywords */
 .highlight {
-    color: #a8b2d1;
+    color: #c8d0e9;
     font-weight: bold;
     /* background-color: rgba(100, 255, 218, 0.1); */
     padding: 2px 4px;
@@ -785,7 +803,7 @@ ul.technologies li div:hover {
     font-size: 1.25rem;
     font-weight: 600;
     color: #e2e8f0;
-    margin-bottom: -21px;
+    margin-bottom: -15px;
 }
 
 .project-description {
