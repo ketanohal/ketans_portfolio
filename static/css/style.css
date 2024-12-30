@@ -2,15 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap');
 
 /* Global Styles */
-body, html {
+/* body, html {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    color: #ccd6f6; /* Lightest Slate */
-    background-color: #02132d; /* Navy */
-    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    color: #ccd6f6; 
+    background-color: #02132d;
+    overflow-x: hidden; 
     scroll-behavior: smooth;
-}
+} */
 .sidebar .postion {
     color: #fafafa; /* Blue accent for position */
     font-size: 20px;
@@ -41,19 +41,18 @@ body, html {
 }
 
 /* Container */
-.container {
+/* .container {
     display: flex;
     height: 100vh;
     margin-left: 170px;  
-    /* margin-right: 80px;  */
     overflow: hidden;
-}
+} */
 
 /* Sidebar */
-.sidebar {
+/* .sidebar {
     width: 50%;
     max-height: 100vh;
-    background-color: #02132d; /* Navy */
+    background-color: #02132d; 
     padding-top: 2.5rem;
     padding-bottom: 6rem;
     display: flex;
@@ -61,14 +60,13 @@ body, html {
     justify-content: space-between;
     position: sticky;
     top: 0;
-}
+} */
 
 .sidebar h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     line-height: 1;
     color: #ffffff; /* Green */
-    margin-bottom: -34px;
     font-weight: 700;
     letter-spacing: -.025em;
     cursor: pointer;
@@ -79,8 +77,6 @@ body, html {
 .sidebar p {
     font-family: 'Inter', sans-serif;
     color: #8892b0; /* Slate */
-    margin: -10px 0;
-    margin-top: -80px;
 }
 
 /* Navigation container */
@@ -149,14 +145,14 @@ body, html {
 
 
 /* Content Area */
-.content {
+/* .content {
     width: 50%;
     padding: 5px 10px;
     padding-right: 110px;
-    overflow-y: auto; /* Enable vertical scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling */
-    direction: ltr; /* Ensure the scrollbar appears on the right */
-}
+    overflow-y: auto; 
+    -webkit-overflow-scrolling: touch; 
+    direction: ltr; 
+} */
 
 /* Scrollbar Styling for Content Area */
 .content::-webkit-scrollbar {
@@ -338,11 +334,18 @@ html {
 
 /* Styling for job title link */
 .group a {
+    font-size: 12px;
+    display: flex;               /* Turn the anchor into a flex container */
+    justify-content: center;     /* Horizontally center the text */
+    align-items: center;         /* Vertically center the text */
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
     transition: color 0.3s ease;
+    height: 100%;                /* Ensure the anchor takes full height of its parent */
+    width: 100%;                 /* Ensure the anchor takes full width of its parent */
 }
+
 
 .group:hover a {
     color: #23fcdf; /* Light color for the title on hover */
@@ -826,4 +829,127 @@ ul.technologies li div:hover {
     font-size: 12px;
     font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 15px;
+    font-family: 'Inter', sans-serif;
+    color: #ccd6f6;
+    background-color: #02132d;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    padding: 0 10px; /* Add some padding to prevent content from sticking to the edges */
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1; /* Let sidebar take up available space */
+    max-height: 100vh;
+    width: 100%;
+    background-color: #02132d;
+    padding-top: 2.9rem;
+    padding-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+/* Content Area */
+.content {
+    flex: 2; /* Make content area take up twice the space of sidebar */
+    /* padding: 5px 10px; */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    direction: ltr;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    /* Adjust layout for medium screens (tablets and below) */
+    .container {
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar takes full width */
+        padding-top: 1.5rem; /* Adjust padding */
+    }
+
+    .content {
+        width: 100%; /* Content takes full width */
+        padding-right: 0; /* Remove extra padding */
+    }
+
+    .sidebar h1 {
+        font-size: 2rem; /* Reduce font size for smaller screens */
+    }
+
+    .navigation ul li a {
+        font-size: 1rem; /* Adjust font size for navigation links */
+    }
+
+    .about-section {
+        padding: 20px; /* Reduce padding for about section */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjust layout for small screens (phones) */
+    .sidebar {
+        width: 100%;
+        padding-bottom: 0px;
+        padding-top: 3rem; /* Further reduce padding */
+    }
+    .project-title{
+        font-size: 14px;
+    }
+    .project-card {
+        display: block;       /* Block-level element, stacked vertically */
+        margin: 0 auto;       /* Centers the block horizontally */
+    }
+    
+    .project-image {
+        padding-left: 76px;
+        padding-top: 20px;
+        transition: border 0.2s ease;
+        margin: 0 auto;       /* Centers the image container horizontally */
+    }
+
+    .content {
+        width: 100%;
+        padding-right: 10px;
+    }
+
+    .sidebar h1 {
+        font-size: 1.5rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem; /* Adjust section titles */
+    }
+
+    .navigation ul li a {
+        font-size: 0.875rem; /* Reduce navigation font size */
+    }
+
+    /* Hide the custom cursor on small screens to avoid interference */
+    .cursor {
+        display: none;
+    }
+
+    .about-content p {
+        font-size: 0.875rem; /* Adjust text size for paragraphs */
+    }
 }
