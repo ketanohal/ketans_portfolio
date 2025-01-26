@@ -905,26 +905,77 @@ body, html {
     }
 }
 
+/* Style for the tooltip container */
+/* Tooltip Container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Tooltip Text */
+.tooltip-link {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+}
+
+.tooltip-link .tooltip-text {
+    visibility: hidden;
+    width: 150px; /* Adjust width as needed */
+    background-color: #02132d;
+    color: #43c9c2;
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-link:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
 @media (max-width: 768px) {
     /* Adjust layout for small screens (phones) */
     .sidebar {
         width: 100%;
-        padding-bottom: 0px;
-        padding-top: 3rem; /* Further reduce padding */
+        max-height: 30%;
+        padding-bottom: 0;
+        padding-top: 2rem; /* Increased top padding */
+        margin-bottom: 0;
     }
-    .project-title{
+
+    .sidebar h1 {
+        font-size: 1.5rem;
+        margin-bottom: -20px;
+    }
+
+    .sidebar p {
+        margin-bottom: -10px;
+    }
+
+    .project-title {
         font-size: 14px;
     }
+
     .project-card {
-        display: block;       /* Block-level element, stacked vertically */
-        margin: 0 auto;       /* Centers the block horizontally */
+        display: block;
+        margin: 0 auto;
     }
-    
+
     .project-image {
         padding-left: 76px;
         padding-top: 20px;
         transition: border 0.2s ease;
-        margin: 0 auto;       /* Centers the image container horizontally */
+        margin: 0 auto;
     }
 
     .content {
@@ -937,19 +988,49 @@ body, html {
     }
 
     .content h2 {
-        font-size: 1.5rem; /* Adjust section titles */
+        font-size: 1.5rem;
+    }
+
+    /* Navigation ul adjustments */
+    .navigation ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .navigation ul li {
+        margin-right: 5px;
+        flex-grow: 0;
     }
 
     .navigation ul li a {
-        font-size: 0.875rem; /* Reduce navigation font size */
+        font-size: 0.875rem;
+        text-decoration: none;
     }
 
-    /* Hide the custom cursor on small screens to avoid interference */
+    /* Remove cursor on small screens */
     .cursor {
         display: none;
     }
 
     .about-content p {
-        font-size: 0.875rem; /* Adjust text size for paragraphs */
+        font-size: 0.875rem;
+    }
+
+    nav {
+        margin-bottom: 0;
+    }
+
+    /* Social Links adjustments */
+    .social-links {
+        display: flex;
+        justify-content: center;
+        margin-top: -5px;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        max-height: 29px;
     }
 }

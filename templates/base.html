@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <!-- Linking to external JavaScript files -->
-    <script defer src="{{ url_for('static', filename='js/smoothScroll.js') }}"></script>
-    <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/smoothScroll.min.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/main.min.js') }}"></script>
 
     <!-- Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
@@ -60,6 +60,14 @@
                 <!-- Phone -->
                 <a href="tel:+919623061402" aria-label="Phone">
                     <i class="fas fa-phone-alt"></i>
+                </a>
+                <!-- Download Resume -->
+                <a href="{{ url_for('static', filename='documents/Ketan_Ohal_Resume.pdf') }}" 
+                    download="Ketan_Ohal_Resume.pdf" 
+                    target="_blank" 
+                    class="tooltip-link">
+                        <i class="fas fa-download"></i>
+                        <span class="tooltip-text">Download Resume</span>
                 </a>
             </div>
                         
