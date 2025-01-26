@@ -944,22 +944,24 @@ body, html {
 }
 
 @media (max-width: 768px) {
-    /* Adjust layout for small screens (phones) */
+    /* Ensure the sidebar remains fixed and stable */
     .sidebar {
         width: 100%;
-        max-height: 30%;
+        max-height: 100%;
         padding-bottom: 0;
-        padding-top:0rem; /* Increased top padding */
+        padding-top: 2rem; /* Increased padding-top */
         margin-bottom: 0;
+        position: relative; /* Ensure the sidebar stays fixed in its position */
+        overflow: auto; /* Prevent sidebar overflow */
     }
 
     .sidebar h1 {
         font-size: 1.5rem;
-        margin-bottom: -20px;
+        margin-bottom: 0;
     }
 
     .sidebar p {
-        margin-bottom: -10px;
+        margin-bottom: 5px; /* Adjust margin to avoid pushing elements too much */
     }
 
     .project-title {
@@ -1008,6 +1010,7 @@ body, html {
     .navigation ul li a {
         font-size: 0.875rem;
         text-decoration: none;
+        transition: color 0.3s ease; /* Add smooth transition */
     }
 
     /* Remove cursor on small screens */
@@ -1032,5 +1035,10 @@ body, html {
         padding-top: 0;
         padding-bottom: 0;
         max-height: 29px;
+    }
+
+    /* Smooth scrolling effect */
+    html {
+        scroll-behavior: smooth;
     }
 }
