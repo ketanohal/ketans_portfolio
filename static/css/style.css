@@ -1036,4 +1036,8 @@ body, html {
         width: 100%;
         padding-right: 10px;
     }
+    .content section {
+        margin-bottom: 60px;
+        padding-top: 180px;
+    }    
 }
